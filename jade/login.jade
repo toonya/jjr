@@ -1,0 +1,18 @@
+extends inc/base
+
+block title
+	title 登陆
+
+block page
+	.page.login.bg-orange
+		.logo
+			img.img-responsive(src="img/logo-white.png")
+		.main
+			form
+				.wrapper
+					input#phone(type="text", placeholder="请输入手机号码")
+					hr
+					input#pw(type="password", placeholder="请输入密码6~8个数字")
+				button.color-orange.mt.line-higher(type="submit") 登 陆
+				.text-right
+					a.c-d-gray(href="find-pw.html") 忘记密码?

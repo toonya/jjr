@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>首页</title>
+        <title>登陆</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
@@ -13,7 +13,18 @@
             <div class="logo">
                 <img src="img/logo-white.png" class="img-responsive">
             </div>
-            <div class="main"></div>
+            <div class="main">
+                <form>
+                    <div class="wrapper">
+                        <input id="phone" type="text" placeholder="请输入手机号码">
+                        <hr>
+                        <input id="pw" type="password" placeholder="请输入密码6~8个数字">
+                    </div>
+                    <button type="submit" class="color-orange mt line-higher">登 陆</button>
+                    <div class="text-right"><a href="find-pw.html" class="c-d-gray">忘记密码?</a>
+                    </div>
+                </form>
+            </div>
         </div>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/main.js"></script>

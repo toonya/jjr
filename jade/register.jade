@@ -1,0 +1,27 @@
+extends inc/base
+
+block title
+	title 注册
+
+block inpage
+	.logo
+		img.img-responsive(src="img/logo-color.png")
+	.main
+		form
+			.single-line
+				input.br.line-higher.mb033(type="text", placeholder="姓名")
+				input.br.line-higher.mb033(type="text", placeholder="手机")
+				
+				.input-group.mb033
+					input.line-higher(placeholder="请输入您收到的验证码")
+					a.addon.bg-orange 获取验证码消息
+
+				.notice.c-gray.br.mb033
+					p 注册条款：
+
+				label
+					input.br.inline(type="checkbox")
+					span.c-d-gray 已阅读并同意本注册遵守条款
+
+
+			button.bg-orange.mt.line-higher(type="submit") 注 册

@@ -1,22 +1,191 @@
+@import "basic.less";
 
+// ----------------------------------------
+// ! variables
+// ----------------------------------------
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+@c-orange: #FD8A24;
+@c-l-orange: #ff8a00;
+@c-gray: #cdcdcd;
+@c-d-gray: #777;
+@c-border: #CFCFCF;
+@c-d-border: #D9D9D9;
 
+@h-line: 24px;
 
+// ----------------------------------------
+// ! basic layout
+// ----------------------------------------
+html, body, .page {
+	width: 100%;
+	height: 100%;
+}
 
+.page {
+	padding: 5%;
+	height: auto;
+	min-height: 100%;
+	overflow: auto;
+}
 
+.logo {
+	width: 65%;
+	margin: 24px auto;
+}
 
+.text-right {
+	text-align: right;
+}
 
+// ----------------------------------------
+// ! basic style
+// ----------------------------------------
+.bg-orange {
+	background-color: @c-orange;
+}
 
+.nobg {
+	background: none;
+}
 
+input {
+	border-radius: 0;
+	margin: 0;
+}
 
+input, button, .notice {
+	display: block;
+	width: 100%;
+	height: 36px;
+	padding: 6px;
+	border-radius: 3px;
+	border: none;
+	background: #fff;
+	color: @c-l-orange;
+	font-size: 15px;
 
+	&.line-higher {
+		height: 42px;
+	}
+}
 
+.inline {
+	display: inline-block;
+}
 
+hr {
+	margin: 6px auto;
+	background: @c-border;
+}
 
+.mt2 {
+	margin-top: @h-line * 2;
+}
 
+.mt {
+	margin-top: @h-line;
+}
 
+.mb05 {
+	margin-bottom: @h-line/2;
+}
 
+.mb033 {
+	margin-bottom: @h-line/3;
+}
 
+.pd2 {
+	padding-top: @h-line * 2;
+}
+
+.pd {
+	padding-top: @h-line;
+}
+
+::-webkit-input-placeholder {
+    color: @c-gray;
+}
+ 
+:-moz-placeholder {
+    color: @c-gray;
+}
+ 
+:-ms-input-placeholder {
+    /* IE10+ */
+    color: @c-gray;
+}
+
+.c-d-gray {
+	color: @c-d-gray;
+}
+
+.c-gray {
+	color: @c-gray;
+}
+
+.bg-orange {
+	background: @c-orange;
+	color: #fff;
+}
+
+.br {
+	border: 1px solid @c-d-border;
+}
+
+.notice {
+	height: @h-line*4;
+	overflow: auto;
+}
+
+.input-group {
+	position: relative;
+	display: table;
+	border-collapse: separate;
+
+	input, .addon {
+		display: table-cell;
+	}
+
+	input {
+		position: relative;
+		z-index: 2;
+		float: left;
+		width: 100%;
+		margin-bottom: 0;
+		.br();
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right: none;
+	}
+
+	.addon {
+		padding: 0 6px;
+		width: 1%;
+		white-space: nowrap;
+		vertical-align: middle;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+}
+
+.page.bg-city {
+	background: #ECECEC url(../img/bg-city.png) no-repeat center bottom;
+	background-size: contain;
+}
+// ----------------------------------------
+// ! page login
+// ----------------------------------------
+.page.login {
+	background: @c-orange url(../img/login-bg.png) no-repeat;
+	background-size: cover;
+
+	.main {
+		padding: 24px 0;
+	}
+
+	form .wrapper {
+		background: #fff;
+		border-radius: 3px;
+		padding: 24px;
+	}
+}

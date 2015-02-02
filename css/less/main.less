@@ -6,6 +6,7 @@
 
 @c-orange: #FD8A24;
 @c-l-orange: #ff8a00;
+@c-d-orange: #C46B1A;
 @c-gray: #cdcdcd;
 @c-d-gray: #777;
 @c-border: #CFCFCF;
@@ -42,6 +43,30 @@ html, body, .page {
 // ----------------------------------------
 .bg-orange {
 	background-color: @c-orange;
+}
+
+.brr {
+	border-radius: 3px;
+}
+
+.top-brr {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.bottom-brr {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.left-brr {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.right-brr {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 .nobg {
@@ -123,6 +148,10 @@ hr {
 	color: @c-gray;
 }
 
+.c-orange {
+	color: @c-orange;
+}
+
 .bg-orange {
 	background: @c-orange;
 	color: #fff;
@@ -172,6 +201,19 @@ hr {
 	background: #ECECEC url(../img/bg-city.png) no-repeat center bottom;
 	background-size: contain;
 }
+
+
+h2 {
+	font-weight: bold;
+	font-size: 18px;
+	margin: 12px 1px;
+}
+
+.indent {
+	p {
+		text-indent: 2em;
+	}
+}
 // ----------------------------------------
 // ! page login
 // ----------------------------------------
@@ -187,5 +229,180 @@ hr {
 		background: #fff;
 		border-radius: 3px;
 		padding: 24px;
+	}
+}
+
+// ----------------------------------------
+// ! page account center
+// ----------------------------------------
+.account-center {
+	padding: 12px;
+}
+.account-info {
+	background: #fff;
+	.brr();
+	.br();
+	position: relative;
+	height: @h-line*6;
+	padding: 12px 12px 12px 84px;
+	margin-bottom: 12px;
+
+	.user-icon {
+		position: absolute;
+		left: -24px;
+		top: -24px;
+		width: 96px;
+
+		img {
+			.img-responsive();
+		}
+	}
+
+	.name {
+		font-size: 36px;
+		line-height: 42px;
+		font-weight: bold;
+	}
+
+	a.setting {
+		position: absolute;
+		right: -18px;
+		top: -18px;
+		width: 36px;
+		height: 36px;
+		background: url(../img/icon-setting.png) center center;
+		background-size: cover;
+	}
+
+	.bussiness-history {
+		color: @c-orange;
+		position: absolute;
+		bottom: 6px;
+		right: 24px;
+
+		>div {
+			.inline();
+		}
+
+		span {
+			line-height: 32px;
+			font-size: 24px;
+			font-weight: bold;
+			.inline();
+		}
+
+		p {
+			padding-left: 6px;
+		}
+
+		i {
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			background-size: cover;
+			vertical-align: top;
+		}
+
+		.recommend {
+			margin-right: 6px;
+
+			>div {
+				border-right: 1px solid @c-orange;
+				padding-right: 12px;
+			}
+
+			i {
+				background-image: url(../img/icon-users.png);
+			}
+		}
+
+		.earn {
+			i {
+				background-image: url(../img/icon-money.png);
+			}
+		}
+	}
+}
+
+.account-nav {
+	padding: 1px;
+
+	>a {
+		display: block;
+		float: left;
+		width: 50%;
+		padding-right: 6px;
+		color: #fff;
+		margin-bottom: 12px;
+
+		.inner {
+			padding: 24px 18px;
+			background-color: @c-orange;
+			.brr();
+			background-size: auto 85%;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+		}
+
+		&:nth-child(1) .inner{
+			background-image: url(../img/bg-recommend.png);
+		}&:nth-child(2) .inner{
+			background-image: url(../img/bg-users.png);
+		}&:nth-child(3) .inner{
+			background-image: url(../img/bg-money.png);
+		}&:nth-child(4) .inner{
+			background-image: url(../img/bg-doc.png);
+		}
+
+		.t1 {
+			font-size: 22px;
+			line-height: 22px;
+		}
+
+		.t2 {
+			color: @c-d-orange;
+			font-weight: bold;
+		}
+
+		&:nth-child(even) {
+			padding-right: 0;
+			padding-left: 6px;
+		}
+	}
+
+	&::after {
+		display: block;
+		content: ' ';
+		clear: both;
+	}
+}
+
+.sale-list {
+	padding: 1px;
+
+	.item {
+		margin-bottom: 12px;
+		
+		.thumbnail{
+			display: block;
+			.top-brr();
+			.img-responsive();
+		}
+
+		.info {
+			background: #fff;
+			.bottom-brr();
+			padding: 12px;
+		}
+
+		.title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 12px;
+		}
+
+		.commission span {
+			padding: 1px 3px;
+		}
 	}
 }

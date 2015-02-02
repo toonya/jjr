@@ -360,6 +360,25 @@ body,
 .bg-orange {
   background-color: #fd8a24;
 }
+.brr {
+  border-radius: 3px;
+}
+.top-brr {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.bottom-brr {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.left-brr {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.right-brr {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
 .nobg {
   background: none;
 }
@@ -426,6 +445,9 @@ hr {
 .c-gray {
   color: #cdcdcd;
 }
+.c-orange {
+  color: #fd8a24;
+}
 .bg-orange {
   background: #fd8a24;
   color: #fff;
@@ -469,6 +491,14 @@ hr {
   background: #ececec url(../img/bg-city.png) no-repeat center bottom;
   background-size: contain;
 }
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 12px 1px;
+}
+.indent p {
+  text-indent: 2em;
+}
 .page.login {
   background: #fd8a24 url(../img/login-bg.png) no-repeat;
   background-size: cover;
@@ -480,4 +510,151 @@ hr {
   background: #fff;
   border-radius: 3px;
   padding: 24px;
+}
+.account-center {
+  padding: 12px;
+}
+.account-info {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  position: relative;
+  height: 144px;
+  padding: 12px 12px 12px 84px;
+  margin-bottom: 12px;
+}
+.account-info .user-icon {
+  position: absolute;
+  left: -24px;
+  top: -24px;
+  width: 96px;
+}
+.account-info .user-icon img {
+  max-width: 100%;
+}
+.account-info .name {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+}
+.account-info a.setting {
+  position: absolute;
+  right: -18px;
+  top: -18px;
+  width: 36px;
+  height: 36px;
+  background: url(../img/icon-setting.png) center center;
+  background-size: cover;
+}
+.account-info .bussiness-history {
+  color: #fd8a24;
+  position: absolute;
+  bottom: 6px;
+  right: 24px;
+}
+.account-info .bussiness-history > div {
+  display: inline-block;
+}
+.account-info .bussiness-history span {
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+}
+.account-info .bussiness-history p {
+  padding-left: 6px;
+}
+.account-info .bussiness-history i {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  vertical-align: top;
+}
+.account-info .bussiness-history .recommend {
+  margin-right: 6px;
+}
+.account-info .bussiness-history .recommend > div {
+  border-right: 1px solid #fd8a24;
+  padding-right: 12px;
+}
+.account-info .bussiness-history .recommend i {
+  background-image: url(../img/icon-users.png);
+}
+.account-info .bussiness-history .earn i {
+  background-image: url(../img/icon-money.png);
+}
+.account-nav {
+  padding: 1px;
+}
+.account-nav > a {
+  display: block;
+  float: left;
+  width: 50%;
+  padding-right: 6px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.account-nav > a .inner {
+  padding: 24px 18px;
+  background-color: #fd8a24;
+  border-radius: 3px;
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.account-nav > a:nth-child(1) .inner {
+  background-image: url(../img/bg-recommend.png);
+}
+.account-nav > a:nth-child(2) .inner {
+  background-image: url(../img/bg-users.png);
+}
+.account-nav > a:nth-child(3) .inner {
+  background-image: url(../img/bg-money.png);
+}
+.account-nav > a:nth-child(4) .inner {
+  background-image: url(../img/bg-doc.png);
+}
+.account-nav > a .t1 {
+  font-size: 22px;
+  line-height: 22px;
+}
+.account-nav > a .t2 {
+  color: #c46b1a;
+  font-weight: bold;
+}
+.account-nav > a:nth-child(even) {
+  padding-right: 0;
+  padding-left: 6px;
+}
+.account-nav::after {
+  display: block;
+  content: ' ';
+  clear: both;
+}
+.sale-list {
+  padding: 1px;
+}
+.sale-list .item {
+  margin-bottom: 12px;
+}
+.sale-list .item .thumbnail {
+  display: block;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  max-width: 100%;
+}
+.sale-list .item .info {
+  background: #fff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 12px;
+}
+.sale-list .item .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.sale-list .item .commission span {
+  padding: 1px 3px;
 }

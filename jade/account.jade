@@ -1,0 +1,64 @@
+extends inc/base
+
+block title
+	title 我的账户
+
+block inpage
+	.main
+		.account-center
+			.account-info
+				.user-icon
+					img(src="img/avatar.png")
+				.name 余漫斯
+				a.setting(href="setting.html")
+				.bussiness-history
+					.recommend
+						p 推荐人数
+						div
+							i
+							span 86
+					.earn
+						p 总佣金
+						div
+							i
+							span 86
+			.account-nav
+				a(href="recommend.html")
+					.inner
+						.t1 我要推荐
+						.t2 Recommend
+				a(href="account-client.html")
+					.inner
+						.t1 我的客户
+						.t2 Client
+				a(href="account-commission.html")
+					.inner
+						.t1 我的佣金
+						.t2 Commission
+				a(href="rules.html")
+					.inner
+						.t1 活动细则
+						.t2 Rules
+
+			.account-sale
+				h2 在售项目
+				.sale-list
+					mixin saleItem
+						.item
+							img.thumbnail(src="img/ex-building.jpg")
+							.info
+								.title 万科城
+								.commission
+									| 佣金 <span class='bg-orange'>0.3%的总房款</span>
+								.note
+									p 备注
+									.indent
+										// 备注区域
+										p 佣金标准：165/210平米成交佣金为0.3%；270/310房型成交佣金为0.4%，380平米成交佣金为0.5.%。
+										p 佣金支付时限：客户签约后一个月内。
+
+					+saleItem
+					+saleItem
+
+
+

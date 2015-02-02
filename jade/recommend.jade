@@ -1,0 +1,33 @@
+extends inc/base
+
+block title
+	title 推荐
+
+block inpage
+	+selection('sex', '男', '女')
+	+selection('loupan', '万科城', '万象城', '宝漫城')
+	.main
+		form.mt
+			input.br.line-higher.mb033(type="text", placeholder="客户姓名")
+			
+			.mb033.selection
+				.input-group(data-target="sex")
+					input.line-higher(type="text", placeholder="客户性别", disabled)
+					a.addon.bg-orange
+						span.glyphicons.arrow-down
+
+			input.br.line-higher.mb033(type="tel", placeholder="手机号码", data-duplicate="phone")
+			.text-right.small.mb05
+				a.c-d-gray(data-duplicate-target="phone") + 添加更多手机号码
+			
+			.mb033.selection
+				.input-group(data-target="loupan")
+					input.line-higher(type="text", placeholder="选择楼盘意向", disabled)
+					a.addon.bg-orange
+						span.glyphicons.arrow-down		
+
+			input.br.line-higher.mb033(type="text", placeholder="备注(可选)")
+
+			.mb.small.c-d-gray.p1 提示：请务必提交真实的客户信息，若多次提交虚假信息，您的帐号会被禁用。
+
+			button.bg-orange.mt.line-higher(type="submit") 推 荐

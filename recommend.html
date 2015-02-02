@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>推荐</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="page bg-city">
+            <div id="sex" class="selection-box hidden">
+                <div class="inner">
+                    <div class="title">请点击一个选项</div>
+                    <ul>
+                        <li>男</li>
+                        <li>女</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="loupan" class="selection-box hidden">
+                <div class="inner">
+                    <div class="title">请点击一个选项</div>
+                    <ul>
+                        <li>万科城</li>
+                        <li>万象城</li>
+                        <li>宝漫城</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <form class="mt">
+                    <input type="text" placeholder="客户姓名" class="br line-higher mb033">
+                    <div class="mb033 selection">
+                        <div data-target="sex" class="input-group">
+                            <input type="text" placeholder="客户性别" disabled class="line-higher">
+                            <a class="addon bg-orange">
+                                <span class="glyphicons arrow-down"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <input type="tel" placeholder="手机号码" data-duplicate="phone" class="br line-higher mb033">
+                    <div class="text-right small mb05"><a data-duplicate-target="phone" class="c-d-gray">+ 添加更多手机号码</a>
+                    </div>
+                    <div class="mb033 selection">
+                        <div data-target="loupan" class="input-group">
+                            <input type="text" placeholder="选择楼盘意向" disabled class="line-higher">
+                            <a class="addon bg-orange">
+                                <span class="glyphicons arrow-down"> </span>
+                            </a>
+                        </div>
+                    </div>
+                    <input type="text" placeholder="备注(可选)" class="br line-higher mb033">
+                    <div class="mb small c-d-gray p1">提示：请务必提交真实的客户信息，若多次提交虚假信息，您的帐号会被禁用。</div>
+                    <button type="submit" class="bg-orange mt line-higher">推 荐</button>
+                </form>
+            </div>
+            <div class="copyright">© 嫩牛五方</div>
+        </div>
+        <!--script(src="js/vendor/jquery-1.11.1.min.js")-->
+        <script src="js/zepto.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="http://192.168.31.193:1337/livereload.js"></script>
+    </body>
+</html>

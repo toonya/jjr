@@ -1,0 +1,7 @@
+mixin selection(id,...items)
+	.selection-box.hidden(id=id)
+		.inner
+			.title 请点击一个选项
+			ul
+				each item in items
+					li= item

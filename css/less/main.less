@@ -1,5 +1,8 @@
 @import "basic.less";
-
+@font-face {
+	  font-family: "glyphicons";
+	  src: url("../fonts/glyphicons-halflings-regular.ttf");
+}
 // ----------------------------------------
 // ! variables
 // ----------------------------------------
@@ -27,6 +30,7 @@ html, body, .page {
 	height: auto;
 	min-height: 100%;
 	overflow: auto;
+	position: relative;
 }
 
 .logo {
@@ -47,6 +51,28 @@ html, body, .page {
 // ----------------------------------------
 // ! basic style
 // ----------------------------------------
+.p1 {
+	padding: 1px;
+}
+
+.hidden {
+	display: none;
+}
+
+.small {
+	font-size: 13px;
+}
+
+span.glyphicons {
+	font-family: 'glyphicons';
+	line-height: 36px;
+	padding: 0 6px; 
+	
+	&.arrow-down::before {
+		content: "\e114";
+	}
+}
+
 .bg-orange {
 	background-color: @c-orange;
 }
@@ -82,6 +108,11 @@ html, body, .page {
 input {
 	border-radius: 0;
 	margin: 0;
+	box-shadow: none;
+}
+
+input[disabled] {
+	color: #373737;
 }
 
 input, button, .notice {
@@ -172,6 +203,33 @@ hr {
 	overflow: auto;
 }
 
+.page.bg-city {
+	background: #ECECEC url(../img/bg-city.png) no-repeat center bottom;
+	background-size: contain;
+}
+
+
+h2 {
+	font-weight: bold;
+	font-size: 18px;
+	margin: 12px 1px;
+}
+
+.indent {
+	p {
+		text-indent: 2em;
+	}
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// ----------------------------------------
+// ! component
+// ----------------------------------------
 .input-group {
 	position: relative;
 	display: table;
@@ -203,23 +261,46 @@ hr {
 	}
 }
 
-.page.bg-city {
-	background: #ECECEC url(../img/bg-city.png) no-repeat center bottom;
-	background-size: contain;
-}
+.selection-box {
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.5);
+	max-height: 100%;
+	overflow: auto;
+	
+	.title {
+		text-align: center;
+		color: #eee;
+		position: absolute;
+		top: -36px;
+		width: 100%;
+	}
+	.inner {
+		position: absolute;
+		max-height: 80%;
+		width: 100%;
+		top: 50%;
+		background: #fff;
+		transform: translateY(-50%);
+	}
+	
+	ul {
+		li {
+			border-bottom: 1px solid #f4f4f4;
+			text-align: center;
+			line-height: 48px;
 
-
-h2 {
-	font-weight: bold;
-	font-size: 18px;
-	margin: 12px 1px;
-}
-
-.indent {
-	p {
-		text-indent: 2em;
+			&:nth-last-child(1) {
+				border: none;
+			}
+		}
 	}
 }
+
 // ----------------------------------------
 // ! page login
 // ----------------------------------------

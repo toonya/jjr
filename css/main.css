@@ -357,6 +357,11 @@ body,
 .text-right {
   text-align: right;
 }
+.copyright {
+  text-align: center;
+  margin: 24px 0 72px;
+  color: #777777;
+}
 .bg-orange {
   background-color: #fd8a24;
 }

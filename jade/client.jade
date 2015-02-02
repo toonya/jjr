@@ -1,0 +1,24 @@
+extends inc/base
+
+block title
+	title 我的客户
+
+block inpage
+	.main
+		.client
+			.item.head
+				.name 姓名
+				.loupan 意向楼盘
+				.phone 电话
+				.state 状态 
+			+client('1', '已登记')
+			+client('2', '已到访')
+			+client('3', '已认筹')
+			+client('4', '已认购')
+			+client('5', '已签约')
+			+client('6', '已回款')
+
+		.small.c-d-gray.mt.text-center 提示：具体判客规则以“活动规则”里的相关说明为准！
+
+
+

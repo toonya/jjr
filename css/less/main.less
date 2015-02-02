@@ -38,6 +38,9 @@ html, body, .page {
 	margin: 24px auto;
 }
 
+.text-center {
+	text-align: center;
+}
 .text-right {
 	text-align: right;
 }
@@ -490,6 +493,86 @@ ul {
 
 		.commission span {
 			padding: 1px 3px;
+		}
+	}
+}
+
+// ----------------------------------------
+// ! page of client
+// ----------------------------------------
+.client {
+	font-size: 12px;
+	text-align: center;
+
+	.item {
+		background: #fff;
+		margin-bottom: 6px;
+		position: relative;
+
+		&>div {
+			float: left;
+			padding: 12px 6px;
+		}
+
+		&::after {
+			content: ' ';
+			clear: both;
+			display: block;
+		}
+
+		.name {
+			width: 16%;
+		}
+
+		.loupan {
+			width: 38%;
+		}
+
+		.phone {
+			width: 27%;
+		}
+
+		.state {
+			width: 17%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+
+			span {
+				display: block;
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	.state {
+		color: #fff;
+	}
+
+	.state1 {
+		background: #FC0F42;
+	}.state2 {
+		background: #FD7222;
+	}.state3 {
+		background: #EFC52C;
+	}.state4 {
+		background: #47B720;
+	}.state5 {
+		background: #22D4AA;
+	}.state6 {
+		background: #1BA4E4;
+	}
+
+	.head {
+		background: none;
+
+		.state {
+			color: inherit;
 		}
 	}
 }

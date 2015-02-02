@@ -359,6 +359,9 @@ body,
   width: 65%;
   margin: 24px auto;
 }
+.text-center {
+  text-align: center;
+}
 .text-right {
   text-align: right;
 }
@@ -729,4 +732,75 @@ ul {
 }
 .sale-list .item .commission span {
   padding: 1px 3px;
+}
+.client {
+  font-size: 12px;
+  text-align: center;
+}
+.client .item {
+  background: #fff;
+  margin-bottom: 6px;
+  position: relative;
+}
+.client .item > div {
+  float: left;
+  padding: 12px 6px;
+}
+.client .item::after {
+  content: ' ';
+  clear: both;
+  display: block;
+}
+.client .item .name {
+  width: 16%;
+}
+.client .item .loupan {
+  width: 38%;
+}
+.client .item .phone {
+  width: 27%;
+}
+.client .item .state {
+  width: 17%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.client .item .state span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.client .state {
+  color: #fff;
+}
+.client .state1 {
+  background: #FC0F42;
+}
+.client .state2 {
+  background: #FD7222;
+}
+.client .state3 {
+  background: #EFC52C;
+}
+.client .state4 {
+  background: #47B720;
+}
+.client .state5 {
+  background: #22D4AA;
+}
+.client .state6 {
+  background: #1BA4E4;
+}
+.client .head {
+  background: none;
+}
+.client .head .state {
+  color: inherit;
 }

@@ -1,0 +1,36 @@
+extends inc/base
+
+block title
+	title 我的佣金
+
+block inpage
+	.main
+		.block-layout
+			.item
+				.inner.bg-commission.bg-rb
+					.t1 可结佣（税前）
+					.t1.mt033
+						strong 0
+						span.small 元
+			.item
+				.inner.bg-commission.bg-rb
+					.t1 已结佣
+					.t1.mt033
+						strong 666
+						span.small 元
+
+
+		a.inline-group.br.c-d-gray.box-lg(href="bind-card.html")
+			.content 
+				span.glyphicons.card
+				span 请绑定您的银行卡号
+			.addon
+				span.glyphicons.arrow-right.c-orange
+
+		h2.mt 账目明细
+		.trade
+			+trade(1)
+			+trade(0)
+			+trade(2)
+
+

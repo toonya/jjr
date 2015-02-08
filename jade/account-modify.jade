@@ -1,0 +1,21 @@
+extends inc/base
+
+block title
+	title 个人主页
+
+block inpage
+	.main
+		form.mt(action="account.html")
+
+			.input-group.mb033
+				input.c-d-gray.line-higher(placeholder="请输入您的姓名", value="余漫斯")
+				.c-gray.addon.gray 修改姓名
+
+			.input-group.mb033
+				input.c-d-gray.line-higher(placeholder="请输入您的手机号", value="18577346887")
+				.c-gray.addon.gray 修改手机
+
+			
+			button.mt2.bg-orange.color-orange.line-higher(type="submit") 保 存
+
+

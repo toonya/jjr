@@ -8,7 +8,7 @@ mixin selection(id,...items)
 
 
 mixin client(state, stateName)
-	.item
+	a.item(href="client-detail.html")
 		.name 
 			span 余漫斯
 		.loupan 万科翡翠城
@@ -16,3 +16,19 @@ mixin client(state, stateName)
 			span 18577345443
 		.state(class='state'+state)
 			span= stateName
+
+mixin trade(state)
+	.item.row.content-box.br.brr.mb033
+		.col-8
+			div 提现-万科翡翠城佣金20元
+			.c-d-gray.small 2015.1.23
+		.col-4.text-right
+			div -20.00
+			case state
+				when 0
+					.small.c-red 等待银行处理
+				when 1
+					.small.c-d-gray 交易成功
+				when 2
+					.small.c-d-gray 已发佣
+	

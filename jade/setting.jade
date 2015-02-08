@@ -1,0 +1,29 @@
+extends inc/base
+
+block title
+	title 我的账户
+
+block inpage
+	.main
+		.account-center
+			.account-info
+				.user-icon
+					img(src="img/avatar.png")
+				.name 余漫斯
+				p.small 18577346887
+				a.modify(href="account-modify.html")
+					span.glyphicons.pencil
+
+			.mt 更改我的身份
+			.account-nav.role
+				a(href="#")
+					.inner
+						.t1 我是案场经理
+				a(href="#")
+					.inner
+						.t1 我是置业顾问
+				a(href="#")
+					.inner
+						.t1 我是机构经纪人
+
+

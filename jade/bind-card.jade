@@ -1,0 +1,17 @@
+extends inc/base
+
+block title
+	title 绑定银行卡
+
+block inpage
+	.main
+		form.mt
+			input.br.line-higher.mb033(type="text", placeholder="请输入您的开户名")
+			input.br.line-higher.mb033(type="text", placeholder="请输入您的银行卡号")
+			input.br.line-higher.mb033(type="text", placeholder="请输入您的银行名称")
+			.mt
+				a.small.c-d-gray(href="find-pw.html") 提示：为了您能够快速结佣，请提供准确的银行信息，例如招商银行西安曲江支行。
+			
+			button.mt2.bg-orange.color-orange.line-higher(type="submit") 保 存
+
+
